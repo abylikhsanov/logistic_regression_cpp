@@ -123,6 +123,33 @@ logistic_regression/fast:
 	$(MAKE) -f CMakeFiles/logistic_regression.dir/build.make CMakeFiles/logistic_regression.dir/build
 .PHONY : logistic_regression/fast
 
+HiddenLayer.o: HiddenLayer.cpp.o
+
+.PHONY : HiddenLayer.o
+
+# target to build an object file
+HiddenLayer.cpp.o:
+	$(MAKE) -f CMakeFiles/logistic_regression.dir/build.make CMakeFiles/logistic_regression.dir/HiddenLayer.cpp.o
+.PHONY : HiddenLayer.cpp.o
+
+HiddenLayer.i: HiddenLayer.cpp.i
+
+.PHONY : HiddenLayer.i
+
+# target to preprocess a source file
+HiddenLayer.cpp.i:
+	$(MAKE) -f CMakeFiles/logistic_regression.dir/build.make CMakeFiles/logistic_regression.dir/HiddenLayer.cpp.i
+.PHONY : HiddenLayer.cpp.i
+
+HiddenLayer.s: HiddenLayer.cpp.s
+
+.PHONY : HiddenLayer.s
+
+# target to generate assembly for a file
+HiddenLayer.cpp.s:
+	$(MAKE) -f CMakeFiles/logistic_regression.dir/build.make CMakeFiles/logistic_regression.dir/HiddenLayer.cpp.s
+.PHONY : HiddenLayer.cpp.s
+
 Logistic.o: Logistic.cpp.o
 
 .PHONY : Logistic.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... logistic_regression"
+	@echo "... HiddenLayer.o"
+	@echo "... HiddenLayer.i"
+	@echo "... HiddenLayer.s"
 	@echo "... Logistic.o"
 	@echo "... Logistic.i"
 	@echo "... Logistic.s"

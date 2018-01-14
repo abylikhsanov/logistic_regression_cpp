@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/abylikhsanov/CLionProjects/logistic_regression/HiddenLayer.cpp" "/Users/abylikhsanov/CLionProjects/logistic_regression/cmake-build-debug/CMakeFiles/logistic_regression.dir/HiddenLayer.cpp.o"
   "/Users/abylikhsanov/CLionProjects/logistic_regression/Logistic.cpp" "/Users/abylikhsanov/CLionProjects/logistic_regression/cmake-build-debug/CMakeFiles/logistic_regression.dir/Logistic.cpp.o"
   "/Users/abylikhsanov/CLionProjects/logistic_regression/main.cpp" "/Users/abylikhsanov/CLionProjects/logistic_regression/cmake-build-debug/CMakeFiles/logistic_regression.dir/main.cpp.o"
   )

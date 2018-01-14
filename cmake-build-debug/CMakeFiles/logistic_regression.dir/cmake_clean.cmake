@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/logistic_regression.dir/main.cpp.o"
   "CMakeFiles/logistic_regression.dir/Logistic.cpp.o"
+  "CMakeFiles/logistic_regression.dir/HiddenLayer.cpp.o"
   "logistic_regression.pdb"
   "logistic_regression"
 )

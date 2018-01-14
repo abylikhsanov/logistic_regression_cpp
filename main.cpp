@@ -1,8 +1,6 @@
 #include <iostream>
-#include "Eigen/Dense"
+
 #include "Logistic.h"
-#include <vector>
-#include <exception>
 #include <numeric>
 double slope(const std::vector<double> & x, const std::vector<double> &y){
     std::cout<<x.size()<<" "<<y.size()<<std::endl;
@@ -24,32 +22,33 @@ double slope(const std::vector<double> & x, const std::vector<double> &y){
 }
 
 template<class K>
-void start(double lrate, int n_epochs, K train_n, K test_n){
-    std::vector< std::vector<K> > train_x{{1, 1, 1, 0, 0, 0},
-                                            {1, 0, 1, 0, 0, 0},
-                                            {1, 1, 1, 0, 0, 0},
-                                            {0, 0, 1, 1, 1, 0},
-                                            {0, 0, 1, 1, 0, 0},
-                                            {0, 0, 1, 1, 1, 0}};
-    std::vector< std::vector<K> > y_train{{1, 0},
-                                            {1, 0},
-                                            {1, 0},
-                                            {0, 1},
-                                            {0, 1},
-                                            {0, 1}};
+void start(double lrate, int n_epochs, K train_n, K test_n, std::vector< std::vector<K> > train_x,
+           std::vector< std::vector<K> > train_y){
+
     Logistic l(train_n, train_n, test_n);
     for(int i = 0; i<n_epochs; i++){
         std::cout<<"EPOCH "<<i;
         for(int j = 0; j<train_n; j++){
-            l.train(train_x[j], y_train[j], lrate);
+            l.train(train_x[j], train_y[j], lrate);
         }
         std::cout<<" accuracy:"<<l.return_error(i)<<std::endl;
     }
     l.predict({1,1,1,0,0,0},{0,0});
 }
 int main() {
-    Eigen::MatrixXd m(2,3);
-    start(0.1,10,6,2);
+    std::vector< std::vector<int> > train_x{{1, 1, 1, 0, 0, 0},
+                                            {1, 0, 1, 0, 0, 0},
+                                            {1, 1, 1, 0, 0, 0},
+                                            {0, 0, 1, 1, 1, 0},
+                                            {0, 0, 1, 1, 0, 0},
+                                            {0, 0, 1, 1, 1, 0}};
+    std::vector< std::vector<int> > y_train{{1, 0},
+                                          {1, 0},
+                                          {1, 0},
+                                          {0, 1},
+                                          {0, 1},
+                                          {0, 1}};
+    start(0.1,500,6,2,train_x,y_train);
 
     return 0;
 }

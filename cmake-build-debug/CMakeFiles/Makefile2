@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /Users/abylikhsanov/CLionProjects/logistic_regression/cmake-b
 CMakeFiles/logistic_regression.dir/all:
 	$(MAKE) -f CMakeFiles/logistic_regression.dir/build.make CMakeFiles/logistic_regression.dir/depend
 	$(MAKE) -f CMakeFiles/logistic_regression.dir/build.make CMakeFiles/logistic_regression.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/abylikhsanov/CLionProjects/logistic_regression/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target logistic_regression"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/abylikhsanov/CLionProjects/logistic_regression/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target logistic_regression"
 .PHONY : CMakeFiles/logistic_regression.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/logistic_regression.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/logistic_regression.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/abylikhsanov/CLionProjects/logistic_regression/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/abylikhsanov/CLionProjects/logistic_regression/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/logistic_regression.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/abylikhsanov/CLionProjects/logistic_regression/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/logistic_regression.dir/rule

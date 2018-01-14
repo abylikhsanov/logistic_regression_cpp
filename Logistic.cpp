@@ -3,9 +3,7 @@
 //
 
 #include "Logistic.h"
-#include <vector>
-#include <ostream>
-#include <math.h>
+#include "Helper.h"
 
 Logistic::Logistic(int size, int n, int out): N(size), n_in(n), n_out(out){
 
@@ -16,7 +14,7 @@ Logistic::Logistic(int size, int n, int out): N(size), n_in(n), n_out(out){
 
 }
 
-Logistic::~Logistic() {}
+Logistic::~Logistic()=default;
 
 void Logistic::train(std::vector<int> x, std::vector<int> y, double lr){
     std::vector<double> p_y_given_x(n_out,0);
@@ -35,7 +33,7 @@ void Logistic::train(std::vector<int> x, std::vector<int> y, double lr){
         for(int j = 0; j<n_in; j++){
             W[i][j] += (lr * dy[i] * x[j]) / N;
         }
-        b[i] += lr * dy[i]/N;
+        b[i] += (lr * dy[i])/N;
     }
 }
 
@@ -44,7 +42,7 @@ void Logistic::softmax(std::vector<double>& x) {
     double maximum{0.0};
     double sum{0.0};
 
-    for(int i = 0; i<n_out; i++) std::max(maximum, x[i]);
+    for(int i = 0; i<n_out; i++) maximum = std::max(maximum, x[i]);
 
     for(int i = 0; i<n_out; i++){
         x[i] = exp(x[i] - maximum);
@@ -63,7 +61,6 @@ void Logistic::predict(std::vector<int> x, std::vector<double> y) {
         }
         y[i] += b[i];
     }
-    std::cout<<x[1]<<" "<<y[1]<<std::endl;
     softmax(y);
     std::cout<<y[0]<<" "<<y[1]<<std::endl;
 

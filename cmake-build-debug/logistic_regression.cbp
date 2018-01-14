@@ -82,6 +82,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/abylikhsanov/CLionProjects/logistic_regression/Helper.h">
+			<Option target="logistic_regression"/>
+		</Unit>
+		<Unit filename="/Users/abylikhsanov/CLionProjects/logistic_regression/HiddenLayer.cpp">
+			<Option target="logistic_regression"/>
+		</Unit>
+		<Unit filename="/Users/abylikhsanov/CLionProjects/logistic_regression/HiddenLayer.h">
+			<Option target="logistic_regression"/>
+		</Unit>
 		<Unit filename="/Users/abylikhsanov/CLionProjects/logistic_regression/Logistic.cpp">
 			<Option target="logistic_regression"/>
 		</Unit>
